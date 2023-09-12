@@ -1,8 +1,8 @@
 const aws = require('aws-sdk');
 aws.config.update({
     region: "ap-south-1",
-    accessKeyId: "AKIARJ5OMNR34O3UAFJ7",
-    secretAccessKey: "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"
+    accessKeyId: PROCESS.ENV.ID,
+    secretAccessKey: PROCESS.ENV.KEY
 });
 const dynamoClient = new aws.DynamoDB.DocumentClient();
 const TABLE_NAME = "chrome-ext";
